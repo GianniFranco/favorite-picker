@@ -233,15 +233,37 @@ button.disabled:hover {
 <script>
 'use strict';
 
-var items = [
-      {id: 'jetnyan', name: 'Jetnyan', image: 'jetnyan.png'},
-    {id: 'machonyan', name: 'Machonyan', image: 'machonyan.png'},
-    {id: 'jibanyan', name: 'Jibanyan', image: 'jibanyan.png'},
-    {id: 'camelia', name: 'Camelia', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/9/95/CamelliaArtwork.png/revision/latest?cb=20221025103444'},
-    {id: 'melofreccio', name: 'Melofreccio', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/e/e5/Sigh-Durr_2D.png/revision/latest?cb=20230102070324'},
-    {id: 'rovinasonno', name: 'Rovinasonno', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/a/ab/Makura-gaeshi_Artwork.png/revision/latest?cb=20221024004939'}, 
-    {id: 'padezoma', name: 'Padezoma', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/8/83/Pandle_Artwork.png/revision/latest?cb=20191227231004'}, 
-    {id: 'padesolo', name: 'Padesolo', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/4/4b/Undy_Artwork.png/revision/latest/scale-to-width-down/350?cb=20191227231506'},// Define your items here
+var items = [ 
+      {id: '', name: '', image: ''},
+    {id: 'camelia', name: 'Camelia', image: ''},
+    {id: 'padezoma', name: 'Padezoma', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Pandle.webp'}, 
+    {id: 'padesolo', name: 'Padesolo', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Undy.webp'},
+      {id: 'mambo', name: 'Mambo', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Tanbo.webp'},
+      {id: 'katanoh', name: 'Katanoh', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Cutta-nah.webp'},
+      {id: 'katachiom', name: 'Katachiom', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Cutta-nah-nah.webp'},
+      {id: 'pigrabbio', name: 'Pigrabbio', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Slacka-slash.webp'},
+      {id: 'nervimacho', name: 'Nervimacho', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Mochismo.webp'},
+      {id: 'miomacho', name: 'Miomacho', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Minochi.webp'},
+      {id: 'adelmo', name: 'Adelmo', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Helmsman.webp'},
+      {id: 'uniguerriero', name: 'Uniguerriero', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Reuknight.webp'},
+      {id: 'leofuoco', name: 'Leofuoco', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Blazion.webp'},
+      {id: 'leosismo', name: 'Leosismo', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Quaken.webp'},
+      {id: 'siro', name: 'Siro', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Siro.webp'},
+      {id: 'zardo', name: 'Zardo', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Chansin.webp'},
+      {id: 'lucenio', name: 'Lucenio', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/d/d9/Sheen2.png/revision/latest?cb=20221116052706'},
+      {id: 'quietana', name: 'Quietana', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/6/69/SneeArtwork.png/revision/latest?cb=20241204215809'},
+      {id: 'aurio', name: 'Aurio', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Gleam.webp'},
+      {id: 'benkei', name: 'Benkei', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Benkei.webp'},
+      {id: 'b3nk1', name: 'B3NK1', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/B3-NK1.webp'},
+      {id: 'nipponon', name: 'Nipponon', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Sushiyama.webp'},
+      {id: 'kapunkai', name: 'Kapunkai', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Kapunki.webp'},
+      {id: 'scarafante', name: 'Scarafante', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Beetler.webp'},
+      {id: 'scaragen', name: 'Scaragen', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/c/cf/Kuwaga-Taishou.png/revision/latest?cb=20190201222714'},
+      {id: 'scaragone', name: 'Scaragone', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Cruncha.webp'},
+      {id: 'furyo', name: 'Furyo', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/0/0f/Kushamusha2.png/revision/latest?cb=20220727222422'},
+      {id: 'homblu', name: 'Homblu', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Snartle.webp'},
+      {id: 'shogunyan', name: 'Shogunyan', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Shogunyan.webp'},
+      {id: 'pulishido', name: 'Pulishido', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Brushido.webp'}
 ];
 
 var myPicker = new picker.Picker({
