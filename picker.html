@@ -608,8 +608,13 @@ var items = [
     {id: 'miopatra', name: 'Miopatra', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Meopatra.webp'}
 ];
 
-var myPicker = new picker.Picker({
-    items: items
+    var myPicker = new picker.Picker({
+    items: items,
+    localStorageKey: 'picker-state',
+    defaultSettings: {
+        minBatchSize: 3,
+        maxBatchSize: 20
+    }
 });
 
 var pickerUI = new PickerUI(myPicker, {
