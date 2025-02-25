@@ -283,7 +283,7 @@ var items = [
       {id: 'roninguilla', name: 'Roninguilla', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Time_Keeler.webp'},
       {id: 'maximuspuro', name: "Maximus Puro", image: 'https://static.wikia.nocookie.net/yokaiwatch/images/d/d2/Moximous_N_transparent.png/revision/latest?cb=20241124151040'},
       {id: 'maximusdeca', name: "Maximus Deca", image: 'https://static.wikia.nocookie.net/yokaiwatch/images/1/14/Moximous_K.png/revision/latest/scale-to-width-down/350?cb=20220627231919'},
-    {id: 'lumynotto', name: 'Lumynotto', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/2/23/IlluminoctArtwork.png/revision/latest?cb=20240315025135'},
+      {id: 'lumynotto', name: 'Lumynotto', image: 'https://static.wikia.nocookie.net/yokaiwatch/images/2/23/IlluminoctArtwork.png/revision/latest?cb=20240315025135'},
     
       {id: 'melofreccio', name: 'Melofreccio', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/large/Sigh-Durr.webp'},
       {id: 'rovinasonno', name: 'Rovinasonno', image: 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/yokaidex/small/Flippit.webp'},
@@ -616,6 +616,18 @@ var items = [
         maxBatchSize: 20
     }
 });
+
+    elements: {
+    pick: "#pick",
+    pass: "#pass",
+    undo: "#undo",
+    redo: "#redo",
+    evaluating: "#evaluating",
+    favorites: "#favorites",
+    settings: {
+        maxBatchSize: '#max-batch-size'
+    }
+}
 
 var pickerUI = new PickerUI(myPicker, {
     elements: {
