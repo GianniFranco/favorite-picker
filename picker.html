@@ -617,18 +617,6 @@ var items = [
     }
 });
 
-    elements: {
-    pick: "#pick",
-    pass: "#pass",
-    undo: "#undo",
-    redo: "#redo",
-    evaluating: "#evaluating",
-    favorites: "#favorites",
-    settings: {
-        maxBatchSize: '#max-batch-size'
-    }
-}
-
 var pickerUI = new PickerUI(myPicker, {
     elements: {
         
@@ -638,6 +626,8 @@ var pickerUI = new PickerUI(myPicker, {
         redo: "#redo",
         evaluating: "#evaluating",
         favorites: "#favorites"
+        settings: {
+        maxBatchSize: '#max-batch-size'
     }
 });
 
